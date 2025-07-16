@@ -1,0 +1,27 @@
+# Archivos de entorno y configuración
+.env
+
+# Archivos y carpetas de IDE/Editor
+.idea/
+.vscode/
+
+# Archivos generados por Python
+__pycache__/
+*.pyc
+
+# Archivos de modelos
+resources/*/*.pkl
+
+# Bases de datos locales
+db.sqlite3
+neo4j_db/
+mongo_db/
+
+# Archivos de logs
+centinela_logs/debug.log
+*.log
+
+# Entorno virtual
+venv/
+
+resources/models/

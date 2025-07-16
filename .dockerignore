@@ -1,0 +1,27 @@
+# Archivos de control de versión
+.git
+.gitignore
+
+# Archivos de configuración y documentación
+README.md
+.env.template
+
+# Archivos y carpetas de IDE/Editor
+.idea/
+.vscode/
+
+# Archivos generados por Python
+__pycache__/
+*.pyc
+*.pkl
+
+# Bases de datos locales
+db.sqlite3
+neo4j_db/
+mongo_db/
+
+# Entorno virtual
+venv/
+
+# Archivos de log
+*.log
