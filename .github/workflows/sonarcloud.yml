@@ -3,20 +3,18 @@ name: SonarCloud Analysis
 on:
   push:
     branches:
-      - master  # o 'main' si es tu rama principal
+      - master
   pull_request:
     types: [opened, synchronize, reopened]
 
 jobs:
   sonarcloud:
-    name: SonarCloud
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # necesario para SonarCloud
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -29,10 +27,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        with:
-          projectBaseDir: .
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_PROJECT_KEY: christianhernandez7_search_engine_backend
-          SONAR_ORGANIZATION: christianhernandez7
